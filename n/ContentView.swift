@@ -9,15 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
             ZStack{
                 Image("images")
                     .resizable()
-                    . frame(width: 300,height: 300)
+                    . frame(width: 250,height: 250)
                     .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.red, lineWidth: 15))
+                    .overlay(Circle().stroke(Color.red, lineWidth: 10))
             }
+        VStack(alignment:.leading) {
             Text("Nada Abdullah")
+                .font(.largeTitle)
+                .fontWeight(.black)
+                .foregroundColor(Color.green)
+                
+            
+            Text("I'm 24 years old, Computer Scinece student, and a passionate programmer")
+                .font(.subheadline)
+                .fontWeight(.medium)
+                .foregroundColor(Color.gray)
+                .multilineTextAlignment(.leading)
+                
         }
         .padding()
     }
